@@ -13,7 +13,7 @@ margin:0px;
             min-height: 600px;
           
            
-            background-image: url("F:/christmas/christmas-background-23.jpeg");
+            background-image: url("F:/christmasEcard/christmas-background-23.jpeg");
    
     background-attachment: fixed;
     background-position: center;
@@ -35,24 +35,30 @@ margin:0px;
              left:54%;
              height:180px;
              bottom:0px;
-             border:1px solid black;
+        //     border:1px solid black;
            
            
         }  
          #content{
           
             position:relative;
-          // border:1px solid red;
+			top:150px;
+            //border:1px solid red;
             width:45%;
              left:52%;
-            height:110px;       
+            height:auto;       
              z-index: 1;
-        }  
+        }
+#content img{
+width:100%;
+heigth:100%;
+
+}		
         #roll{
              position:absolute;
           height:100%;
             width:17%;
-            left:75%;
+            right:0px;
         
              animation-name: example;
             animation-duration: 10s;    
@@ -60,7 +66,8 @@ margin:0px;
             transition-duration: 1s;
             transition: positon 1s;
             transition-delay: 1s;
-            border:1px solid red;
+			 animation-iteration-count:infinite;
+          //  border:1px solid red;
          
         }
         #roll img{
@@ -68,20 +75,33 @@ margin:0px;
             width:100%;
         }
         #header p{
-position:fixed;
-            left:30%;
-        width:25%;
-            top:0px;
+position:relative;
+          margin:auto;
+		  
+        width:35%;
+            top:10px;
           
-            z-index:1;
+             animation-name: merryChristmasText;
+            animation-duration: 10s;    
+           animation-delay:1s; 
+		   text-shadow: 0 0 5px blue;
+		   color: white;
+		   z-index:1;
+		   animation-iteration-count:infinite;
           
             font-style: oblique;
-             font-size: 1.5em;
+             font-size: 2.0em;
             font-weight: bold;
              font-variant: small-caps;
             font-family:  serif;
+			transition: 1s;
             
         }
+		@keyframes merryChristmasText{
+		   0% {width:35%; font-size:2.0em;}
+		   50% {width:50% ;font-size:2.5em;}
+		   100%{width:35%;font-size:2.0em;}
+		}
         @keyframes example {
              0%   {left:75%; }
              10%   {left:65%; }
@@ -102,10 +122,10 @@ position:fixed;
     
   
     <div id="content">
-    
+  <!--  <img src="F:/christmasEcard/minionsgroup.gif"> -->
     </div>
       <div id="footer">
-           <div id="roll"> <img src="F:/christmas/minionjump.gif"></div>
+           <div id="roll"> <img src="F:/christmasEcard/minionjump.gif"></div> 
     
     </div>
     
